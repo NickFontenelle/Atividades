@@ -1,0 +1,22 @@
+<script>
+    /*
+    PROBLEMA
+    Considere o seguinte cenário:
+    Uma loja de carros usados paga aos vendedores um salário fixo por mês, além de comissão para cada carro vendido, no valor de 3% sobre o salário fixo. Também, sobre o valor total vendido, o funcionário receberá outros 5% de comissão.
+    Faça um script que receba o salário fixo pago por mês, a quantidade de carros vendidos, e também o valor total dos carros vendidos pelo funcionário.
+    Calcule e escreva o salário final do vendedor.
+    */
+
+    //ENTRADA
+const salarioFixo = Number(prompt("Informe seu salário fixo:"))
+const qntCarros = parseInt(prompt("Quantidade de carros vendidos:"))
+const valorDoCarro = Number(prompt("Informe o valor do carro:"))
+
+    //PROCESSAMENTO
+const valorRecebidoPorCarro = (3/100 * qntCarros) * qntCarros
+const bonusVendaTotal = (5/100 * valorDoCarro) 
+const valorDoSalario = valorRecebidoPorCarro + bonusVendaTotal + salarioFixo
+
+    //SAÍDA
+document.write(`O seu salário final é R$${valorDoSalario}`)
+</script>
